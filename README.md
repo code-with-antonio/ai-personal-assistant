@@ -128,8 +128,9 @@ DATABASE_URL_UNPOOLED=
 NEON_AI_GATEWAY_BASE_URL=
 NEON_AI_GATEWAY_TOKEN=
 
-# Trigger.dev: the development key
+# Trigger.dev: the development key and the project ref
 TRIGGER_SECRET_KEY=
+TRIGGER_PROJECT_REF=
 
 # Telegram: the bot token, and a secret you choose for Telegram -> server
 TELEGRAM_BOT_TOKEN=
@@ -150,10 +151,12 @@ LINQ_WEBHOOK_SECRET=
 DAYTONA_API_KEY=
 FIRECRAWL_API_KEY=
 
-# Sentry: optional. Without a DSN nothing is reported. SENTRY_AUTH_TOKEN
-# uploads the task source maps on deploy
+# Sentry: optional. Without a DSN nothing is reported. The other three
+# upload the task source maps on deploy
 SENTRY_DSN=
 TRIGGER_SENTRY_DSN=
+SENTRY_ORG=
+SENTRY_PROJECT=
 SENTRY_AUTH_TOKEN=
 ```
 
@@ -162,8 +165,6 @@ SENTRY_AUTH_TOKEN=
 In Clerk, enable Billing and create a user plan slugged `pro`.
 
 **4. Push the schema and run**
-
-Set `project` in `trigger.config.ts` to your own Trigger.dev project ref first.
 
 ```bash
 npm run db:push            # create the tables

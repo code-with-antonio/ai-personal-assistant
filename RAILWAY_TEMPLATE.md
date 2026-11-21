@@ -26,7 +26,7 @@ cd ai-personal-assistant
 npm install
 ```
 
-Set `project` in `trigger.config.ts` to your own Trigger.dev project ref, then:
+Put your Trigger.dev project ref in `.env` as `TRIGGER_PROJECT_REF`, then:
 
 ```bash
 npx trigger.dev@4.8.3 deploy
