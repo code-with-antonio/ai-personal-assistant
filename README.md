@@ -163,6 +163,8 @@ In Clerk, enable Billing and create a user plan slugged `pro`.
 
 **4. Push the schema and run**
 
+Set `project` in `trigger.config.ts` to your own Trigger.dev project ref first.
+
 ```bash
 npm run db:push            # create the tables
 npm run dev                # terminal 1: Hono server on http://localhost:3000
