@@ -87,12 +87,12 @@ Turn on Billing and create a user plan with the slug `pro`. Without it every mes
 **4. Point Telegram at your Railway domain**
 
 ```bash
-curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
-  -d "url=https://<your-railway-domain>/telegram/webhook" \
-  -d "secret_token=<TELEGRAM_WEBHOOK_SECRET>"
+curl "https://api.telegram.org/botYOUR_BOT_TOKEN/setWebhook" \
+  -d "url=https://YOUR_RAILWAY_DOMAIN/telegram/webhook" \
+  -d "secret_token=YOUR_TELEGRAM_WEBHOOK_SECRET"
 ```
 
-For iMessage, set `https://<your-railway-domain>/linq/webhook` as the `message.received` webhook in Linq.
+For iMessage, set `https://YOUR_RAILWAY_DOMAIN/linq/webhook` as the `message.received` webhook in Linq.
 
 Now message your bot, open the sign in link, subscribe to Pro and start chatting.
 

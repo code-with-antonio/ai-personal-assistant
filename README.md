@@ -17,6 +17,7 @@ Message it on Telegram or iMessage and it searches the web, works on a computer 
 [![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=for-the-badge&logo=clerk&logoColor=white)](https://cwa.run/clerk)
 [![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white)](https://cwa.run/sentry)
 [![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)](https://cwa.run/railway)
+<a href="https://railway.com/deploy/personal-ai-assist-1?referralCode=ANTONIO&utm_medium=integration&utm_source=template&utm_campaign=generic"><img src="https://railway.com/button.svg" alt="Deploy on Railway" height="28" /></a>
 
 </div>
 
@@ -194,7 +195,9 @@ The server runs on Railway and the tasks run on Trigger.dev, so there are two th
 
 **1. Deploy the server to [Railway](https://cwa.run/railway)**
 
-Create a service from this repository. Railway builds it with `npm run build` and starts it with `npm start`. Give it the variables from `.env`, with `TRIGGER_SECRET_KEY` set to your Trigger.dev **production** key and the `TRIGGER_*_WEBHOOK_*` values taken from the production endpoints.
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/personal-ai-assist-1?referralCode=ANTONIO&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
+Fill in the variables it asks for. `TRIGGER_SECRET_KEY` is your Trigger.dev **production** key here, and the `TRIGGER_*_WEBHOOK_*` values come from the production endpoints, so deploy the tasks (step 2) first if you haven't.
 
 **2. Deploy the tasks to Trigger.dev**
 
