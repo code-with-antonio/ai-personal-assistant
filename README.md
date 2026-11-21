@@ -229,6 +229,6 @@ Issues and pull requests are welcome. Run `npm run build` before opening one. Ch
 
 <div align="center">
 
-Built by [Code With Antonio](https://github.com/code-with-antonio)
+Built by [Code With Antonio](https://www.codewithantonio.com)
 
 </div>
