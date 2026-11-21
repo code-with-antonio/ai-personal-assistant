@@ -191,23 +191,17 @@ Send your bot a message, open the sign in link, subscribe to Pro and start chatt
 
 ## Deployment
 
-The server runs on Railway and the tasks run on Trigger.dev, so there are two things to deploy.
+The tasks run on Trigger.dev and the server runs on Railway. Deploy the tasks first, because the server needs the URLs of their webhook endpoints.
 
-**1. Deploy the server to [Railway](https://cwa.run/railway)**
-
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/personal-ai-assist-1?referralCode=ANTONIO&utm_medium=integration&utm_source=template&utm_campaign=generic)
-
-Fill in the variables it asks for. `TRIGGER_SECRET_KEY` is your Trigger.dev **production** key here, and the `TRIGGER_*_WEBHOOK_*` values come from the production endpoints, so deploy the tasks (step 2) first if you haven't.
-
-**2. Deploy the tasks to Trigger.dev**
+**1. Deploy the tasks to Trigger.dev**
 
 ```bash
 npx trigger.dev@4.8.3 deploy
 ```
 
-**3. Give the tasks their variables**
+**2. Give the tasks their variables**
 
-Add these to the project's production environment in Trigger.dev:
+Add these to the production environment of your project in Trigger.dev:
 
 ```bash
 DATABASE_URL=
@@ -225,9 +219,15 @@ LINQ_API_V3_API_KEY=
 TRIGGER_SENTRY_DSN=
 ```
 
+**3. Deploy the server to [Railway](https://cwa.run/railway)**
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/personal-ai-assist-1?referralCode=ANTONIO&utm_medium=integration&utm_source=template&utm_campaign=generic)
+
+Fill in the variables it asks for. Use your Trigger.dev **production** secret key for `TRIGGER_SECRET_KEY`, and take the `TRIGGER_*_WEBHOOK_*` values from the production `telegram` and `linq` endpoints in Trigger.dev.
+
 **4. Register the production webhooks**
 
-Run the `setWebhook` call above again with your Railway URL, and update the webhook URL in Linq.
+Run the `setWebhook` call from Getting started again with your Railway domain, and update the webhook URL in Linq.
 
 ## Contributing
 
