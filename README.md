@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.svg" alt="Personal AI Assistant logo" width="128" height="128" />
+
 # Personal AI Assistant
 
 ### The open-source personal AI assistant you can text
